@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+
+\begin{document}
+\centerline{\bf Homework 4 - CSE 276C - Math for Robotics}
+\centerline{Due: 21 November 2021}
+
+\begin{enumerate}
+\item In robotics it is typical to have to recognize objects in the environment.
+  We will here use the German Traffic Sign dataset for recognition of traffic signs. You can download the dataset from the link below.
+
+  To reduce computational time, please use the file Train\_subset.csv to read in the train set. Similarly, please use the file Test\_subset.csv to read in the test set.
+
+https://www.kaggle.com/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign
+
+   Compute subspaces for the PCA and LDA methods. Provide
+  illustration of the respective 1st and 2nd eigenvectors.
+  
+
+  Compute the recognition rates for the test set. Report
+  \begin{itemize}
+  \item Correct classification
+  \item Incorrect classification
+  \end{itemize}
+
+  Provide at least one suggestion for how you might improve performance of each method.
+
+\item Consider a predator-prey dynamics such as the simple
+  Lotka-Volterra model
+  \begin{eqnarray*}
+    \mathbf{x}' &=& \mathbf{f}(\mathbf{x})\\
+    \mathbf{x} &=& \left( \begin{array}{c}  x_1 \\ x_ 2 \end{array}
+    \right) = \left( \begin{array}{c} Prey~polution \\ Predator~population \end{array}\right)\\
+    \mathbf{f}(\mathbf{x}) &=& \left( \begin{array}{c} (b - p x_2) x_1 \\
+                                        (r x_1 - d) x_2\end{array}\right)
+  \end{eqnarray*}
+  Without predators, the prey population increases (exponentially)
+  without bound, whereas without prey, the predator population
+  diminishes (exponentially) to zero. The nonlinear interaction, with
+  predators eating prey, tends to diminish the prey population and
+  increase the predator population. Use your Runga-Kutta to solve this
+  system, with the values b = p = r = d = 1, $x_1(0)$ = 0.3, and $x_2(0)$ =
+  0.2.
+  
+\end{enumerate}
+For all questions provide a description of the approach adopted, the
+associated code and a description of your results. 
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
